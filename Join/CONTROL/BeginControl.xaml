@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Join.BeginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Join"
+             mc:Ignorable="d" 
+             d:DesignHeight="241" d:DesignWidth="392">
+    <Grid Width="391" Height="240">
+        <TextBox x:Name="txtBox_id" Margin="25,75,91,0" TextWrapping="Wrap" Text="" Height="28" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="25,108,0,0" VerticalAlignment="Top" Height="28" Width="275"/>
+        <Button x:Name="btn_login" Content="로그인" HorizontalAlignment="Left" Margin="302,75,0,0" VerticalAlignment="Top" Width="63" Height="61" Click="btn_login_Click"/>
+        <Button x:Name="btn_join" Content="회원가입" HorizontalAlignment="Left" Margin="25,141,0,79" Width="137"/>
+        <Button x:Name="btn_findIdPw" Content="ID/PW 찾기" HorizontalAlignment="Left" Margin="167,141,0,79" Width="133"/>
+        
+    </Grid>
+</UserControl>

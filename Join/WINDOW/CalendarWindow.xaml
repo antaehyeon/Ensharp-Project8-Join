@@ -1,0 +1,12 @@
+﻿<Window x:Class="Join.CalendarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Join"
+        mc:Ignorable="d"
+        Title="생년월일 선택창" Height="219" Width="217">
+    <Grid x:Name="CalendarGrid" Height="187" Width="205">
+        
+    </Grid>
+</Window>
