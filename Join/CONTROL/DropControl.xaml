@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Join.DropControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Join"
+             mc:Ignorable="d" 
+             d:DesignHeight="315" d:DesignWidth="550">
+    <Grid>
+        <Label x:Name="label" Content="정말 회원탈퇴를 하시겠습니까?" HorizontalAlignment="Left" Margin="97,69,0,0" VerticalAlignment="Top" Height="46" Width="371" FontFamily="KoreanGESPB" FontSize="24" Foreground="#FFB60404"/>
+        <Button x:Name="btn_yes" Content="네" HorizontalAlignment="Left" Margin="74,169,0,0" VerticalAlignment="Top" Width="152" Height="55" Background="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}" FontFamily="KoreanGESPB" FontSize="24"/>
+        <Button x:Name="btn_no" Content="아니오" HorizontalAlignment="Left" Margin="316,169,0,0" VerticalAlignment="Top" Width="152" Height="55" Background="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}" FontFamily="KoreanGESPB" FontSize="24"/>
+    </Grid>
+</UserControl>

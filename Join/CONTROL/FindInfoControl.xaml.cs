@@ -16,26 +16,26 @@ using System.Windows.Shapes;
 namespace Join
 {
     /// <summary>
-    /// BeginControl.xaml에 대한 상호 작용 논리
+    /// FindInfoControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class BeginControl : UserControl
+    public partial class FindInfoControl : UserControl
     {
-        public BeginControl()
+        public FindInfoControl()
         {
             InitializeComponent();
         }
 
-        private void btn_login_Click(object sender, RoutedEventArgs e)
+        private void btn_findId_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btn_findInfo_Click(object sender, RoutedEventArgs e)
+        private void btn_fc_back_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void passwordBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        private void btn_findPw_Click(object sender, RoutedEventArgs e)
         {
 
         }

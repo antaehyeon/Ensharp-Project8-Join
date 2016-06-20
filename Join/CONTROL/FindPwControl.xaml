@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Join.FindPwControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Join"
+             mc:Ignorable="d" 
+             d:DesignHeight="324" d:DesignWidth="557">
+    <Grid>
+        <Button x:Name="btn_fpc_back" Content="뒤로가기" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.573,0.55" Height="26" FontFamily="KoreanGESPB" FontSize="18" Click="btn_fpc_back_Click"/>
+        <TextBox x:Name="txtBox_ID" HorizontalAlignment="Left" Height="30" Margin="158,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontFamily="KoreanGESPB" FontSize="18" LostFocus="txtBox_ID_LostFocus"/>
+        <TextBox x:Name="txtBox_email" HorizontalAlignment="Left" Height="30" Margin="158,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontFamily="KoreanGESPB" FontSize="18" LostFocus="txtBox_email_LostFocus"/>
+        <ComboBox x:Name="comboBox_Domain" HorizontalAlignment="Left" Margin="327,171,0,0" VerticalAlignment="Top" Width="138" Height="30" FontFamily="KoreanGESPB" FontSize="18" SelectionChanged="comboBox_SelectionChanged" LostKeyboardFocus="comboBox_Domain_LostKeyboardFocus" PreviewKeyDown="comboBox_Domain_PreviewKeyDown">
+            <ComboBoxItem Content="직접입력" HorizontalAlignment="Left" Width="136" FontFamily="KoreanGESPB" FontSize="14"/>
+            <ComboBoxItem Content="naver.com" HorizontalAlignment="Left" Width="136" FontFamily="KoreanGESPB" FontSize="14"/>
+            <ComboBoxItem Content="daum.net" HorizontalAlignment="Left" Width="136" FontFamily="KoreanGESPB" FontSize="14"/>
+            <ComboBoxItem Content="nate.com" HorizontalAlignment="Left" Width="136" FontFamily="KoreanGESPB" FontSize="14"/>
+            <ComboBoxItem Content="gamil.com" HorizontalAlignment="Left" Width="136" FontFamily="KoreanGESPB" FontSize="14"/>
+            <ComboBoxItem Content="live.co.kr" HorizontalAlignment="Left" Width="136" FontFamily="KoreanGESPB" FontSize="14"/>
+        </ComboBox>
+
+        <Label x:Name="label" Content="비밀번호를 찾기위해 아래에 해당하는 정보를 입력하세요" HorizontalAlignment="Center" Margin="49,70,42,0" VerticalAlignment="Top" FontFamily="KoreanGESPB" FontSize="18"/>
+        <Label x:Name="label1" Content="ID" HorizontalAlignment="Left" Margin="124,136,0,0" VerticalAlignment="Top" Width="29" FontFamily="KoreanGESPB" FontSize="18" Height="30"/>
+        <Label x:Name="label1_Copy" Content="@" HorizontalAlignment="Left" Margin="293,171,0,0" VerticalAlignment="Top" Width="29" FontFamily="KoreanGESPB" FontSize="18" Height="30"/>
+        <Label x:Name="label1_Copy1" Content="Email" HorizontalAlignment="Left" Margin="96,171,0,0" VerticalAlignment="Top" Width="57" FontFamily="KoreanGESPB" FontSize="18" Height="30"/>
+        <Label x:Name="lbl_result" Content="" HorizontalAlignment="Center" Margin="60,244,42,0" VerticalAlignment="Top" FontFamily="KoreanGESPB" FontSize="18"/>
+
+    </Grid>
+</UserControl>

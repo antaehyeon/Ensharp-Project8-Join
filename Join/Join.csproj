@@ -58,8 +58,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CONTROL\ClockControl.xaml.cs">
+      <DependentUpon>ClockControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CONTROL\CalendarControl.xaml.cs">
       <DependentUpon>CalendarControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\FindInfoControl.xaml.cs">
+      <DependentUpon>FindInfoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\FindIdControl.xaml.cs">
+      <DependentUpon>FindIdControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\FindPwControl.xaml.cs">
+      <DependentUpon>FindPwControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\DropControl.xaml.cs">
+      <DependentUpon>DropControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="WINDOW\CalendarWindow.xaml.cs">
       <DependentUpon>CalendarWindow.xaml</DependentUpon>
@@ -76,7 +94,31 @@
     </Compile>
     <Compile Include="MODEL\MemberVO.cs" />
     <Compile Include="ETC\SharingData.cs" />
+    <Page Include="CONTROL\ClockControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CONTROL\CalendarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\FindInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\FindIdControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\FindPwControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\LoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\DropControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

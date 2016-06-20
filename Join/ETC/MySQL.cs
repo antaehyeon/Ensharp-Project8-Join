@@ -88,6 +88,15 @@ namespace Join
             sd.MemberList.Add(member);
         }
 
+        public void deleteTuple()
+        {
+            conn.Open();
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "DELETE FROM member WHERE Id = '" + sd.CurrentId + "';";
+            cmd.ExecuteNonQuery();
+            cmd.Clone();
+        }
+
 
     }
 

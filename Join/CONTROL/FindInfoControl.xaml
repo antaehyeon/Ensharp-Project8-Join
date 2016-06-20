@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Join.FindInfoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Join"
+             mc:Ignorable="d" Height="324" Width="557">
+    <Grid>
+        <Button x:Name="btn_findId" Content="아이디 찾기" HorizontalAlignment="Left" Margin="141,109,0,0" VerticalAlignment="Top" Width="287" Height="55" FontFamily="KoreanGESPB" FontSize="18" Click="btn_findId_Click"/>
+        <Button x:Name="btn_findPw" Content="비밀번호 찾기" HorizontalAlignment="Left" Margin="141,169,0,0" VerticalAlignment="Top" Width="287" Height="55" FontFamily="KoreanGESPB" FontSize="18" Click="btn_findPw_Click"/>
+        <Button x:Name="btn_fc_back" Content="뒤로가기" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.573,0.55" Height="26" FontFamily="KoreanGESPB" FontSize="18" Click="btn_fc_back_Click"/>
+
+    </Grid>
+</UserControl>

@@ -11,6 +11,9 @@ namespace Join
         private static SharingData sData;
         private List<MemberVO> memberList;
 
+        private string currentId = "";
+        private string currentName = "";
+
         public SharingData()
         {
             MemberList = new List<MemberVO>();
@@ -28,6 +31,17 @@ namespace Join
             set { memberList = value; }
         }
 
+        public string CurrentId
+        {
+            get { return currentId; }
+            set { currentId = value; }
+        }
+
+        public string CurrentName
+        {
+            get { return currentName; }
+            set { currentName = value; }
+        }
     }
 
 
