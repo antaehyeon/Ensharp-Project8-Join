@@ -13,6 +13,7 @@ namespace Join
 
         private string currentId = "";
         private string currentName = "";
+        private int currentIndex = 0;
 
         public SharingData()
         {
@@ -41,6 +42,12 @@ namespace Join
         {
             get { return currentName; }
             set { currentName = value; }
+        }
+
+        public int CurrentIndex
+        {
+            get { return currentIndex; }
+            set { currentIndex = value; }
         }
     }
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Join"
         mc:Ignorable="d"
-        Title="생년월일 선택창" Height="219" Width="217">
+        Title="생년월일 선택창" Height="219" Width="217" Closed="Window_Closed">
     <Grid x:Name="CalendarGrid" Height="187" Width="205">
         
     </Grid>

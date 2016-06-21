@@ -4,59 +4,60 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Join"
-             mc:Ignorable="d" Height="410.26" Width="319.491">
+             mc:Ignorable="d" Height="443.26" Width="364.491">
     <Grid>
-        <TextBox x:Name="txtBox_id" HorizontalAlignment="Left" Height="23" Margin="85,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" MaxLength="14" PreviewKeyDown="txtBox_id_PreviewKeyDown" LostFocus="txtBox_id_LostFocus"/>
-        <Label x:Name="lbl_id" Content="아이디" HorizontalAlignment="Left" Margin="43,39,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Label x:Name="lbl_pw" Content="비밀번호" HorizontalAlignment="Left" Margin="33,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Label x:Name="lbl_pwChk" Content="비밀번호 확인" HorizontalAlignment="Left" Margin="9,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <TextBox x:Name="txtBox_name" HorizontalAlignment="Left" Height="23" Margin="85,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" MaxLength="6" PreviewKeyDown="txtBox_name_PreviewKeyDown" LostFocus="txtBox_name_LostFocus"/>
-        <Label x:Name="lbl_name" Content="이름" HorizontalAlignment="Left" Margin="53,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <TextBox x:Name="txtBox_mail" HorizontalAlignment="Left" Height="23" Margin="85,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" MaxLength="16" LostFocus="txtBox_mail_LostFocus" PreviewKeyDown="txtBox_mail_PreviewKeyDown"/>
-        <Label x:Name="lbl_email" Content="이메일" HorizontalAlignment="Left" Margin="43,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Label x:Name="label" Content="@" HorizontalAlignment="Left" Margin="175,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Label x:Name="lbl_phoneNumber" Content="휴대폰" HorizontalAlignment="Left" Margin="43,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Label x:Name="lbl_sex" Content="성별" HorizontalAlignment="Left" Margin="53,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <CheckBox x:Name="chkBox_man" Content="남자" HorizontalAlignment="Left" Margin="84,297,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="chkBox_man_Unchecked"/>
-        <CheckBox x:Name="chkBox_woman" Content="여자" HorizontalAlignment="Left" Margin="151,297,0,0" VerticalAlignment="Top" Unchecked="chkBox_woman_Unchecked" Checked="chkBox_woman_Checked"/>
-        <Label x:Name="lbl_birthDay" Content="생년월일" HorizontalAlignment="Left" Margin="33,319,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Button x:Name="btn_joinMember" Content="회원가입" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Margin="85,348,0,0" Height="29" Click="btn_joinMember_Click"/>
-        <TextBox x:Name="txtBox_address" HorizontalAlignment="Left" Height="23" Margin="85,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" IsReadOnly="True"/>
-        <TextBox x:Name="txtBox_addressDetails" HorizontalAlignment="Left" Height="23" Margin="85,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" PreviewKeyDown="txtBox_addressDetails_PreviewKeyDown"/>
-        <Button x:Name="btn_findAddress" Content="우편번호 찾기" HorizontalAlignment="Left" Margin="175,150,0,0" VerticalAlignment="Top" Width="104" Height="23" RenderTransformOrigin="0.521,-0.105"/>
-        <TextBox x:Name="txtBox_postalCode" HorizontalAlignment="Left" Height="23" Margin="85,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" IsReadOnly="True"/>
-        <Label x:Name="label_Copy11" Content="우편번호" HorizontalAlignment="Left" Margin="33,151,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Label x:Name="label_Copy12" Content="주소" HorizontalAlignment="Left" Margin="53,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <Label x:Name="label_Copy13" Content="상세주소" HorizontalAlignment="Left" Margin="33,207,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10"/>
-        <ComboBox x:Name="comboBox_eamilDomain" HorizontalAlignment="Left" Margin="197,236,0,0" VerticalAlignment="Top" Width="82" SelectionChanged="comboBox_eamilDomain_SelectionChanged" LostFocus="comboBox_eamilDomain_LostFocus">
-            <ComboBoxItem Content="직접입력" HorizontalAlignment="Left" Width="94"/>
-            <ComboBoxItem Content="naver.com" HorizontalAlignment="Left" Width="94"/>
-            <ComboBoxItem Content="daum.net" HorizontalAlignment="Left" Width="94"/>
-            <ComboBoxItem Content="nate.com" HorizontalAlignment="Left" Width="94"/>
-            <ComboBoxItem Content="gamil.com" HorizontalAlignment="Left" Width="94"/>
-            <ComboBoxItem Content="live.co.kr" HorizontalAlignment="Left" Width="94"/>
+        <TextBox x:Name="txtBox_id" HorizontalAlignment="Left" Height="28" Margin="144,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" MaxLength="14" PreviewKeyDown="txtBox_id_PreviewKeyDown" LostFocus="txtBox_id_LostFocus" FontFamily="KoreanGESPB" FontSize="18"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="144,79,0,0" VerticalAlignment="Top" Width="190" Height="28" MaxLength="16" PreviewKeyDown="passwordBox_PreviewKeyDown" PreviewKeyUp="passwordBox_PreviewKeyUp" LostFocus="passwordBox_LostFocus" FontSize="18"/>
+        <PasswordBox x:Name="passwordBox_chk" HorizontalAlignment="Left" Margin="144,110,0,0" VerticalAlignment="Top" Width="190" Height="28" MaxLength="16" PreviewKeyDown="passwordBox_chk_PreviewKeyDown" PreviewKeyUp="passwordBox_chk_PreviewKeyUp" LostFocus="passwordBox_chk_LostFocus" FontSize="18"/>
+        <TextBox Width="190" VerticalAlignment="Top" TextWrapping="Wrap" PreviewKeyDown="txtBox_name_PreviewKeyDown" x:Name="txtBox_name" MaxLength="6" Margin="144,141,0,0" LostFocus="txtBox_name_LostFocus" Height="28" HorizontalAlignment="Left" FontFamily="KoreanGESPB" FontSize="18"/>
+        <TextBox x:Name="txtBox_postalCode" HorizontalAlignment="Left" Height="28" Margin="144,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" IsReadOnly="True"/>
+        <TextBox x:Name="txtBox_address" HorizontalAlignment="Left" Height="28" Margin="144,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" IsReadOnly="True" FontFamily="KoreanGESPB" FontSize="12"/>
+        <TextBox x:Name="txtBox_addressDetails" HorizontalAlignment="Left" Height="28" Margin="144,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" PreviewKeyDown="txtBox_addressDetails_PreviewKeyDown" FontFamily="KoreanGESPB" FontSize="12"/>
+        <TextBox x:Name="txtBox_mail" HorizontalAlignment="Left" Height="28" Margin="144,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" MaxLength="16" LostFocus="txtBox_mail_LostFocus" PreviewKeyDown="txtBox_mail_PreviewKeyDown" FontFamily="KoreanGESPB" FontSize="12"/>
+        <ComboBox x:Name="comboBox_eamilDomain" HorizontalAlignment="Left" Margin="252,265,0,0" VerticalAlignment="Top" Width="82" SelectionChanged="comboBox_eamilDomain_SelectionChanged" LostFocus="comboBox_eamilDomain_LostFocus" Height="28" FontFamily="KoreanGESPB" FontSize="10">
+            <ComboBoxItem Content="직접입력" HorizontalAlignment="Left" Width="80"/>
+            <ComboBoxItem Content="naver.com" HorizontalAlignment="Left" Width="80"/>
+            <ComboBoxItem Content="daum.net" HorizontalAlignment="Left" Width="80"/>
+            <ComboBoxItem Content="nate.com" HorizontalAlignment="Left" Width="80"/>
+            <ComboBoxItem Content="gamil.com" HorizontalAlignment="Left" Width="80"/>
+            <ComboBoxItem Content="live.co.kr" HorizontalAlignment="Left" Width="80"/>
         </ComboBox>
-        <Label x:Name="label1" Content="-" HorizontalAlignment="Left" Margin="139,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10" FontWeight="Bold"/>
-        <TextBox x:Name="txtBox_phoneNumSecond" HorizontalAlignment="Left" Height="23" Margin="156,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" MaxLength="4" PreviewKeyDown="txtBox_phoneNumSecond_PreviewKeyDown" LostFocus="txtBox_phoneNumSecond_LostFocus"/>
-        <Label x:Name="label2" Content="-" HorizontalAlignment="Left" Margin="210,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="10" FontWeight="Bold"/>
-        <TextBox x:Name="txtBox_phoneNumThird" HorizontalAlignment="Left" Height="23" Margin="228,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" MaxLength="4" LostFocus="txtBox_phoneNumThird_LostFocus"/>
-        <TextBox x:Name="txtBox_year" HorizontalAlignment="Left" Height="23" Margin="85,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="43" MaxLength="4" IsReadOnly="True"/>
-        <TextBox x:Name="txtBox_month" HorizontalAlignment="Left" Height="23" Margin="151,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="31" MaxLength="2" IsReadOnly="True"/>
-        <TextBox x:Name="txtBox_day" HorizontalAlignment="Left" Height="23" Margin="204,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="31" MaxLength="2" IsReadOnly="True"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="85,67,0,0" VerticalAlignment="Top" Width="194" Height="23" MaxLength="16" PreviewKeyDown="passwordBox_PreviewKeyDown" PreviewKeyUp="passwordBox_PreviewKeyUp" LostFocus="passwordBox_LostFocus"/>
-        <PasswordBox x:Name="passwordBox_chk" HorizontalAlignment="Left" Margin="85,95,0,0" VerticalAlignment="Top" Width="194" Height="23" MaxLength="16" PreviewKeyDown="passwordBox_chk_PreviewKeyDown" PreviewKeyUp="passwordBox_chk_PreviewKeyUp" LostFocus="passwordBox_chk_LostFocus"/>
-        <Label x:Name="lbl_help" Content="" HorizontalAlignment="Center" Margin="53,8,28,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_phoneNumFirst" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="85,264,0,0" SelectionChanged="comboBox_phoneNumFirst_SelectionChanged">
-            <ComboBoxItem Content="010" HorizontalAlignment="Left" Width="50"/>
-            <ComboBoxItem Content="011" HorizontalAlignment="Left" Width="50"/>
-            <ComboBoxItem Content="016" HorizontalAlignment="Left" Width="50"/>
-            <ComboBoxItem Content="017" HorizontalAlignment="Left" Width="50"/>
-            <ComboBoxItem Content="018" HorizontalAlignment="Left" Width="50"/>
-            <ComboBoxItem Content="019" HorizontalAlignment="Left" Width="50"/>
+        <ComboBox x:Name="comboBox_phoneNumFirst" HorizontalAlignment="Left" VerticalAlignment="Top" Width="55" Margin="144,296,0,0" SelectionChanged="comboBox_phoneNumFirst_SelectionChanged" Height="28" FontFamily="KoreanGESPB" FontSize="10">
+            <ComboBoxItem Content="010" HorizontalAlignment="Left" Width="43"/>
+            <ComboBoxItem Content="011" HorizontalAlignment="Left" Width="43"/>
+            <ComboBoxItem Content="016" HorizontalAlignment="Left" Width="43"/>
+            <ComboBoxItem Content="017" HorizontalAlignment="Left" Width="43"/>
+            <ComboBoxItem Content="018" HorizontalAlignment="Left" Width="43"/>
+            <ComboBoxItem Content="019" HorizontalAlignment="Left" Width="43"/>
         </ComboBox>
-        <Label x:Name="label3" Content="년" HorizontalAlignment="Left" Margin="128,319,0,0" VerticalAlignment="Top" Height="23" Width="23" FontSize="10"/>
-        <Label x:Name="label3_Copy" Content="월" HorizontalAlignment="Left" Margin="181,319,0,0" VerticalAlignment="Top" Height="23" Width="23" FontSize="10"/>
-        <Label x:Name="label3_Copy1" Content="일" HorizontalAlignment="Left" Margin="235,319,0,0" VerticalAlignment="Top" Height="23" Width="23" FontSize="10"/>
-        <Button x:Name="btn_calendar" Content="달력" HorizontalAlignment="Left" Margin="258,320,0,0" VerticalAlignment="Top" Width="21" Height="22" FontSize="8" Click="btn_calendar_Click"/>
+        <TextBox x:Name="txtBox_phoneNumSecond" HorizontalAlignment="Left" Height="28" Margin="216,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" MaxLength="4" PreviewKeyDown="txtBox_phoneNumSecond_PreviewKeyDown" LostFocus="txtBox_phoneNumSecond_LostFocus" FontSize="12" FontFamily="KoreanGESPB"/>
+        <TextBox x:Name="txtBox_phoneNumThird" HorizontalAlignment="Left" Height="28" Margin="283,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51" MaxLength="4" LostFocus="txtBox_phoneNumThird_LostFocus" FontSize="12" FontFamily="KoreanGESPB"/>
+        <TextBox x:Name="txtBox_year" HorizontalAlignment="Left" Height="28" Margin="145,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54" MaxLength="4" IsReadOnly="True" FontSize="16" FontFamily="KoreanGESPB"/>
+        <TextBox x:Name="txtBox_month" HorizontalAlignment="Left" Height="28" Margin="222,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39" MaxLength="2" IsReadOnly="True" FontSize="16" FontFamily="KoreanGESPB"/>
+        <TextBox x:Name="txtBox_day" HorizontalAlignment="Left" Height="28" Margin="283,352,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39" MaxLength="2" IsReadOnly="True" FontSize="16" FontFamily="KoreanGESPB"/>
+
+        <Label x:Name="lbl_id" Content="아이디" HorizontalAlignment="Left" Margin="75,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="28" FontSize="18" FontFamily="KoreanGESPB" Width="64"/>
+        <Label x:Name="lbl_pw" Content="비밀번호" HorizontalAlignment="Left" Margin="60,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="28" FontSize="18" FontFamily="KoreanGESPB"/>
+        <Label x:Name="lbl_pwChk" Content="비밀번호 확인" HorizontalAlignment="Left" Margin="18,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="32" FontSize="18" FontFamily="KoreanGESPB"/>
+        <Label x:Name="lbl_name" Content="이름" HorizontalAlignment="Left" Margin="95,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="30" FontSize="18" FontFamily="KoreanGESPB" Width="46"/>
+        <Label x:Name="lbl_email" Content="이메일" HorizontalAlignment="Left" Margin="77,264,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="29" FontSize="18" FontFamily="KoreanGESPB"/>
+        <Label x:Name="label" Content="@" HorizontalAlignment="Left" Margin="229,268,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="23" FontSize="12" Width="21" FontFamily="KoreanGESPB"/>
+        <Label x:Name="lbl_phoneNumber" Content="휴대폰" HorizontalAlignment="Left" Margin="76,295,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="30" FontSize="18" FontFamily="KoreanGESPB"/>
+        <Label x:Name="lbl_sex" Content="성별" HorizontalAlignment="Left" Margin="94,323,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="29" FontSize="18" FontFamily="KoreanGESPB"/>
+        <CheckBox x:Name="chkBox_man" Content="남자" HorizontalAlignment="Left" Margin="144,329,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="chkBox_man_Unchecked" FontSize="18" FontFamily="KoreanGESPB"/>
+        <CheckBox x:Name="chkBox_woman" Content="여자" HorizontalAlignment="Left" Margin="210,329,0,0" VerticalAlignment="Top" Unchecked="chkBox_woman_Unchecked" Checked="chkBox_woman_Checked" FontSize="18" FontFamily="KoreanGESPB"/>
+        <Label x:Name="lbl_birthDay" Content="생년월일" HorizontalAlignment="Left" Margin="59,352,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="30" FontSize="18" FontFamily="KoreanGESPB"/>
+        <Button x:Name="btn_joinMember" Content="회원가입" HorizontalAlignment="Left" VerticalAlignment="Top" Width="189" Margin="145,385,0,0" Height="29" Click="btn_joinMember_Click" FontSize="16" FontFamily="KoreanGESPB"/>
+        <Button x:Name="btn_findAddress" Content="주소 검색" HorizontalAlignment="Left" Margin="232,172,0,0" VerticalAlignment="Top" Width="102" Height="28" RenderTransformOrigin="0.521,-0.105" FontFamily="KoreanGESPB"/>
+        <Label x:Name="label_Copy11" Content="우편번호" HorizontalAlignment="Left" Margin="60,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="33" FontSize="18" FontFamily="KoreanGESPB"/>
+        <Label x:Name="label_Copy12" Content="주소" HorizontalAlignment="Left" Margin="94,202,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="28" FontFamily="KoreanGESPB" FontSize="18"/>
+        <Label x:Name="label_Copy13" Content="상세주소" HorizontalAlignment="Left" Margin="59,232,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="33" FontFamily="KoreanGESPB" FontSize="18"/>
+        <Label x:Name="label1" Content="-" HorizontalAlignment="Left" Margin="198,296,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="28" FontSize="18" FontWeight="Bold" Width="20" FontFamily="KoreanGESPB"/>
+        <Label x:Name="lbl_help" Content="" HorizontalAlignment="Center" Margin="47,10,42,0" VerticalAlignment="Top" FontFamily="KoreanGESPB" FontSize="16" Width="Auto" Height="Auto"/>
+        <Label x:Name="label3" Content="년" HorizontalAlignment="Left" Margin="196,362,0,0" VerticalAlignment="Top" Height="24" Width="30" FontSize="12" FontFamily="KoreanGESPB"/>
+        <Label x:Name="label3_Copy" Content="월" HorizontalAlignment="Left" Margin="258,362,0,0" VerticalAlignment="Top" Height="23" Width="24" FontSize="12" FontFamily="KoreanGESPB"/>
+        <Label x:Name="label3_Copy1" Content="일" HorizontalAlignment="Left" Margin="319,362,0,0" VerticalAlignment="Top" Height="23" Width="23" FontSize="12" FontFamily="KoreanGESPB"/>
+        <Button x:Name="btn_calendar" Content="달력" HorizontalAlignment="Left" Margin="283,327,0,0" VerticalAlignment="Top" Width="51" Height="22" FontSize="10" Click="btn_calendar_Click" FontFamily="KoreanGESPB"/>
+        <Label x:Name="label1_Copy" Content="-" HorizontalAlignment="Left" Margin="265,296,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.523,-0.068" Height="28" FontSize="18" FontWeight="Bold" Width="20" FontFamily="KoreanGESPB"/>
     </Grid>
 </UserControl>

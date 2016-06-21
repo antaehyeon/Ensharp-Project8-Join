@@ -46,6 +46,19 @@ namespace Join
 
             join.DateChk = true;
             join.btn_calendar.IsEnabled = true;
+
+            join.lbl_birthDay.Foreground = Brushes.Green;
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            join.btn_calendar.IsEnabled = true;
+            if (!join.DateChk)
+            {
+                join.lbl_birthDay.Foreground = Brushes.Red;
+                join.lbl_help.Foreground = Brushes.Red;
+                join.lbl_help.Content = "생년월일을 선택하세요";
+            }
         }
     }
 }

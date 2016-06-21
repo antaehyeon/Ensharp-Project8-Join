@@ -33,6 +33,8 @@ namespace Join
 
             joinControl.btn_joinMember.Click += btnJoinMemberClick;
             this.Closed += windowClosed;
+
+            joinControl.btn_findAddress.Click += btn_findAddress_Click;
         }
 
         // 가입하기 버튼 
@@ -50,6 +52,12 @@ namespace Join
         public void windowClosed(object sender, System.EventArgs e)
         {
             beginWindow.Show();
+        }
+
+        private void btn_findAddress_Click(object sender, System.EventArgs e)
+        {
+            SearchAddress sa = new SearchAddress();
+            sa.Show();
         }
     }
 }

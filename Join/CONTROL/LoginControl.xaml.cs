@@ -42,6 +42,7 @@ namespace Join
                     break;
                 }
             }
+            sd.CurrentIndex = index;
             sd.CurrentName = sd.MemberList[index].Name;
             lbl_guide.Content = sd.MemberList[index].Name + "님 환영합니다";
         }

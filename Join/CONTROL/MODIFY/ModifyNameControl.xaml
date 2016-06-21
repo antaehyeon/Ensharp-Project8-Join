@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Join.ModifyNameControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Join"
+             mc:Ignorable="d" 
+             d:DesignHeight="315" d:DesignWidth="550">
+    <Grid>
+        <Button x:Name="btn_back" Content="뒤로가기" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.573,0.55" Height="26" FontFamily="KoreanGESPB" FontSize="18"/>
+        <Label x:Name="label" Content="수정할 이름 입력" HorizontalAlignment="Left" Margin="93,146,0,0" VerticalAlignment="Top" FontFamily="KoreanGESPB" FontSize="18"/>
+        <TextBox x:Name="txtBox_modifyName" HorizontalAlignment="Left" Height="31" Margin="259,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" FontFamily="KoreanGESPB" FontSize="18" MaxLength="6" PreviewKeyUp="txtBox_modifyName_PreviewKeyUp"/>
+        <Label x:Name="lbl_result" Content="" HorizontalAlignment="Center" Margin="93,90,80,0" VerticalAlignment="Top" FontFamily="KoreanGESPB" FontSize="18" Width="Auto"/>
+        <Button x:Name="btn_modifyName_ok" Content="이 이름으로 수정할래요" HorizontalAlignment="Left" Margin="160,209,0,0" VerticalAlignment="Top" Width="243" FontFamily="KoreanGESPB" FontSize="18" Height="38" Visibility="Hidden"/>
+    </Grid>
+</UserControl>

@@ -35,7 +35,6 @@ namespace Join
         private bool dateChk = false;
         private bool complete = false;
 
-        string emailDomain = "";
         string sex = "";
 
         public bool DateChk
@@ -89,7 +88,7 @@ namespace Join
             // 아이디가 중복되었는지 검사
             for (int i = 0; i < sd.MemberList.Count; i++)
             {
-                if (txtBox_id.Equals(sd.MemberList[i].Id))
+                if (txtBox_id.Text.Equals(sd.MemberList[i].Id))
                 {
                     txtBox_id.Text = "";
                     lbl_help.Foreground = Brushes.Red;
@@ -110,10 +109,8 @@ namespace Join
             {
                 lbl_help.Foreground = Brushes.Red;
                 lbl_help.Content = "아이디는 6자이상, 영어와 숫자만 가능합니다";
-                lbl_help.FontSize = 9;
                 lbl_id.Foreground = Brushes.Red;
             }
-            lbl_help.FontSize = 10;
         }
 
         // 패스워드 텍스트박스 Key Event
@@ -219,7 +216,7 @@ namespace Join
             if (passwordBox.Password.Equals(passwordBox_chk.Password))
             {
                 // 공백일경우
-                if (passwordBox.Password.Equals(""))
+                if (passwordBox.Password.Equals("") || passwordBox.Password.Contains(' '))
                 {
                     lbl_pw.Foreground = Brushes.Red;
                     lbl_pwChk.Foreground = Brushes.Red;
@@ -259,7 +256,7 @@ namespace Join
             }
         }
 
-        // 이름 텍스트박스 키 입력 이벤트
+        // 주소부분
         private void txtBox_addressDetails_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key.Equals(Key.Tab))
@@ -272,7 +269,6 @@ namespace Join
         // 이름 텍스트박스 Lost Focus
         private void txtBox_name_LostFocus(object sender, RoutedEventArgs e)
         {
-
             if (Regex.IsMatch(txtBox_name.Text, "^[가-힣]+$"))
             {
                 lbl_help.Foreground = Brushes.Green;
@@ -299,6 +295,9 @@ namespace Join
         // 이메일 ID 부분 Lost Focus
         private void txtBox_mail_LostFocus(object sender, RoutedEventArgs e)
         {
+            // 이메일 중복체크
+            if (emailDuplicationCheck()) return;
+
             if (Regex.IsMatch(txtBox_mail.Text, "^[a-z0-9]{6,14}$"))
             {
                 lbl_help.Foreground = Brushes.Green;
@@ -322,21 +321,19 @@ namespace Join
                 txtBox_mail.Text = "";
                 lbl_help.Foreground = Brushes.Red;
                 lbl_help.Content = "이메일은 6자이상, 영어와 숫자만 가능합니다";
-                lbl_help.FontSize = 9;
                 lbl_email.Foreground = Brushes.Red;
             }
-            lbl_help.FontSize = 10;
         }
 
         // 이메일 도메인 Select Event
         private void comboBox_eamilDomain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (comboBox_eamilDomain.Text.Equals("")) return;
+
             emailDomainChk = true;
             if (comboBox_eamilDomain.IsEditable) return;
 
-            ComboBox a = sender as ComboBox;
-            ComboBoxItem c = a.SelectedItem as ComboBoxItem;
-            string selected_text = c.Content.ToString();
+            var selected_text = ((System.Windows.Controls.ContentControl)comboBox_eamilDomain.SelectedValue).Content;
 
             if (selected_text.Equals("직접입력"))
             {
@@ -347,6 +344,8 @@ namespace Join
         // 이메일 도메인 lost focus
         private void comboBox_eamilDomain_LostFocus(object sender, RoutedEventArgs e)
         {
+            if (emailDuplicationCheck()) return;
+
             if (comboBox_eamilDomain.Text.Contains(".com") ||
                 comboBox_eamilDomain.Text.Contains(".kr") ||
                 comboBox_eamilDomain.Text.Contains(".net"))
@@ -378,6 +377,8 @@ namespace Join
         //핸드폰번호 첫째자리 ComboBox Select Event
         private void comboBox_phoneNumFirst_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (phoneNumDuplicationCheck()) return;
+
             phoneChk = false;
             txtBox_phoneNumSecond.Focus();
         }
@@ -401,6 +402,8 @@ namespace Join
         // 핸드폰 둘째자리 Lost Focus
         private void txtBox_phoneNumSecond_LostFocus(object sender, RoutedEventArgs e)
         {
+            if (phoneNumDuplicationCheck()) return;
+
             if (!Regex.IsMatch(txtBox_phoneNumSecond.Text, @"^[0-9]{3,4}$"))
             {
                 txtBox_phoneNumSecond.Text = "";
@@ -414,6 +417,8 @@ namespace Join
         // 핸드폰 세번째자리 LostFocus
         private void txtBox_phoneNumThird_LostFocus(object sender, RoutedEventArgs e)
         {
+            if (phoneNumDuplicationCheck()) return;
+
             if (comboBox_phoneNumFirst.Text.Length > 0 &&
                 Regex.IsMatch(txtBox_phoneNumSecond.Text, @"^[0-9]{3,4}$") &&
                 Regex.IsMatch(txtBox_phoneNumThird.Text, @"^[0-9]{4,4}$"))
@@ -496,7 +501,7 @@ namespace Join
                     txtBox_name.Text,
                     phoneNumber,
                     txtBox_postalCode.Text,
-                    txtBox_address.Text,
+                    txtBox_addressDetails.Text,
                     eMail,
                     sex,
                     birthDate
@@ -511,6 +516,44 @@ namespace Join
                 lbl_help.Content = "정보를 제대로 입력하세요";
                 lbl_help.Foreground = Brushes.Red;
             }
+        }
+
+        public bool emailDuplicationCheck()
+        {
+            string email = txtBox_mail.Text + "@" + comboBox_eamilDomain.Text;
+            for (int i = 0; i < sd.MemberList.Count; i++)
+            {
+                if (email.Equals(sd.MemberList[i].Email))
+                {
+                    txtBox_mail.Text = "";
+                    comboBox_eamilDomain.Text = "";
+                    emailIdChk = false;
+                    emailDomainChk = false;
+                    lbl_help.Foreground = Brushes.Red;
+                    lbl_help.Content = "이메일이 중복됩니다";
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool phoneNumDuplicationCheck()
+        {
+            string phoneNum = comboBox_phoneNumFirst.Text + "-" + txtBox_phoneNumSecond.Text + "-" + txtBox_phoneNumThird.Text;
+
+            for(int i = 0; i <sd.MemberList.Count; i++)
+            {
+                if(phoneNum.Equals(sd.MemberList[i].PhoneNumber))
+                {
+                    phoneChk = false;
+                    MessageBox.Show("핸드폰번호가 중복됩니다");
+                    comboBox_phoneNumFirst.Text = "";
+                    txtBox_phoneNumSecond.Text = "";
+                    txtBox_phoneNumThird.Text = "";
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

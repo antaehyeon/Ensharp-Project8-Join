@@ -37,6 +37,8 @@ namespace Join
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (comboBox_Domain.Text.Equals("")) return;
+
             result();
             domainSelect = true;
             if (comboBox_Domain.IsEditable) return;

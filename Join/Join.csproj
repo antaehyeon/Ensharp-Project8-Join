@@ -58,19 +58,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CONTROL\ClockControl.xaml.cs">
+    <Compile Include="CONTROL\FUNCTION\ClockControl.xaml.cs">
       <DependentUpon>ClockControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CONTROL\CalendarControl.xaml.cs">
+    <Compile Include="CONTROL\FUNCTION\CalendarControl.xaml.cs">
       <DependentUpon>CalendarControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CONTROL\FindInfoControl.xaml.cs">
+    <Compile Include="CONTROL\FIND\FindInfoControl.xaml.cs">
       <DependentUpon>FindInfoControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CONTROL\FindIdControl.xaml.cs">
+    <Compile Include="CONTROL\FIND\FindIdControl.xaml.cs">
       <DependentUpon>FindIdControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CONTROL\FindPwControl.xaml.cs">
+    <Compile Include="CONTROL\FIND\FindPwControl.xaml.cs">
       <DependentUpon>FindPwControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="CONTROL\LoginControl.xaml.cs">
@@ -78,6 +78,24 @@
     </Compile>
     <Compile Include="CONTROL\DropControl.xaml.cs">
       <DependentUpon>DropControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\MODIFY\ModifyControl.xaml.cs">
+      <DependentUpon>ModifyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\MODIFY\ModifyPasswordControl.xaml.cs">
+      <DependentUpon>ModifyPasswordControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\MODIFY\ModifyNameControl.xaml.cs">
+      <DependentUpon>ModifyNameControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\MODIFY\ModifyPhoneControl.xaml.cs">
+      <DependentUpon>ModifyPhoneControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\MODIFY\ModifyAddressControl.xaml.cs">
+      <DependentUpon>ModifyAddressControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WINDOW\SearchAddress.xaml.cs">
+      <DependentUpon>SearchAddress.xaml</DependentUpon>
     </Compile>
     <Compile Include="WINDOW\CalendarWindow.xaml.cs">
       <DependentUpon>CalendarWindow.xaml</DependentUpon>
@@ -94,23 +112,23 @@
     </Compile>
     <Compile Include="MODEL\MemberVO.cs" />
     <Compile Include="ETC\SharingData.cs" />
-    <Page Include="CONTROL\ClockControl.xaml">
+    <Page Include="CONTROL\FUNCTION\ClockControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CONTROL\CalendarControl.xaml">
+    <Page Include="CONTROL\FUNCTION\CalendarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CONTROL\FindInfoControl.xaml">
+    <Page Include="CONTROL\FIND\FindInfoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CONTROL\FindIdControl.xaml">
+    <Page Include="CONTROL\FIND\FindIdControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CONTROL\FindPwControl.xaml">
+    <Page Include="CONTROL\FIND\FindPwControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,6 +137,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CONTROL\DropControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\MODIFY\ModifyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\MODIFY\ModifyPasswordControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\MODIFY\ModifyNameControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\MODIFY\ModifyPhoneControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CONTROL\MODIFY\ModifyAddressControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WINDOW\SearchAddress.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

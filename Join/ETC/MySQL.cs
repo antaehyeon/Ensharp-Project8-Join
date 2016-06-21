@@ -38,8 +38,6 @@ namespace Join
         // DB의 데이터를 현재 List에 전송
         public void DBDataToList()
         {
-            int row = 0;
-
             DataSet ds = new DataSet();
 
             string sql = "SELECT * FROM member";
@@ -57,13 +55,13 @@ namespace Join
                 phoneNumber = Convert.ToString(r["PhoneNumber"]);
                 sex = Convert.ToString(r["Sex"]);
                 birthDay = Convert.ToString(r["BirthDay"]);
+
+                MemberVO memberData = new MemberVO(id, pw, name, phoneNumber, postalCode, address, email, sex, birthDay);
+                sd.MemberList.Add(memberData);
             }
 
             if (id.Equals("")) { return; }
 
-            MemberVO memberData = new MemberVO(id, pw, name, phoneNumber, postalCode, address, email, sex, birthDay);
-
-            sd.MemberList.Add(memberData);
         }
 
         public void insertMemberData(MemberVO member)
@@ -94,7 +92,16 @@ namespace Join
             cmd = conn.CreateCommand();
             cmd.CommandText = "DELETE FROM member WHERE Id = '" + sd.CurrentId + "';";
             cmd.ExecuteNonQuery();
-            cmd.Clone();
+            conn.Close();
+        }
+
+        public void update( string modifyField, string modifyData, string conditionField, string conditionData)
+        {
+            conn.Open();
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "UPDATE member SET " + modifyField + " = '" + modifyData + "' WHERE " + conditionField + " = '" + conditionData + "';";
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
 
